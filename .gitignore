@@ -1,6 +1,14 @@
 *.obj
 *.log
 *.tlog
+*.exe
+*.pdb
+*.ilk
+*.sdf
+*.opensdf
+*.suo
+*.sln
+*.vcproj
 
 # Windows image file caches
 Thumbs.db
