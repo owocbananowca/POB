@@ -1,3 +1,7 @@
+*.obj
+*.log
+*.tlog
+
 # Windows image file caches
 Thumbs.db
 ehthumbs.db
