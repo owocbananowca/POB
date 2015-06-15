@@ -16,7 +16,10 @@ string Recipe::GetName() {
 }
 
 void Recipe::AddRecipe(string n, string d, int m) {
-	Recipe(n, d, m);
+	//Recipe(n, d, m);
+	this->name = n;
+	this->descripction = d;
+	this->minutes = m;
 	char temp = 0;
 	while (temp != '7') {
 		cout << "Podaj kategorie skladniku?\n"
@@ -138,10 +141,13 @@ void Recipe::AddRecipe(string n, string d, int m) {
 	}
 }
 
-void Recipe::ListIngredient() {
+void Recipe::ListRecipe() {
 	cout << name << "\n";
-	for (Ingredient* i : ingredients) {
-		i->ListIngredient();
+	//cout << ingredients.size() << endl;
+	cout << "Skladniki:\n";
+	for (size_t i = 0; i < ingredients.size(); i++) {
+		//cout << "Skladnik:\n";
+		ingredients[i]->ListIngredient();
 	}
+	cout << "Koniec skladnikow\n";
 }
-

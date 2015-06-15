@@ -7,7 +7,7 @@
 
 using namespace std;
 
-class Recipe: public Ingredient {
+class Recipe {
 private:
 	string name;
 	string descripction;
@@ -18,7 +18,7 @@ public:
 	Recipe(string name, string description, int minutes);
 	void AddRecipe(string n, string d, int m);
 	//ListRecipe
-	void ListIngredient();
+	void ListRecipe();
 
 	void FindIngredient(string name);
 	void FindRecipe(string name);

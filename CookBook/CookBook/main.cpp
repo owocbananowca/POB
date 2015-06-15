@@ -6,9 +6,9 @@
 
 int main() {
 	//Menu
-	CookBook c = CookBook("ksiazka");
+	CookBook c("ksiazka kucharska 1.0");
 	c.AddRecipe();
-	c.ListIngredient();
+	c.ListAll();
 
 	_getch();
 	return 0;

@@ -7,7 +7,7 @@
 
 using namespace std;
 
-class CookBook : Recipe {
+class CookBook {
 private:
 	string name;
 	int amount;
@@ -18,7 +18,7 @@ public:
 
 	void CreateBook(string name);
 	//ListBook
-	void ListIngredient();
+	void ListAll();
 	void SaveBook();
 	void LoadBook();
 

@@ -19,20 +19,22 @@ void CookBook::AddRecipe() {
 	string a, b;
 	int m;
 	cout << "Podaj nazwe przepisu\n";
-	cin >> a; cin.ignore();
+	getline(cin, a);
 	cout << "Podaj opis przygotowania\n";
-	getline(cin, b); cin.ignore();
-	//cin >> b; cin.ignore();
+	getline(cin, b);
 	cout << "Podaj czas przygotowania\n";
 	cin >> m; cin.ignore();
 	rec.AddRecipe(a, b, m);
+	recipes.push_back(rec);
 }
 
-void CookBook::ListIngredient() {
-	cout << name << "\n"; //
-	for (Recipe r : recipes) {
-		cout << "for recipes\n";
-		r.ListIngredient();
+void CookBook::ListAll() {
+	cout << name << "\n";
+	//cout << recipes.size() << endl;
+	cout << "Przepisy:\n";
+	for (size_t i = 0; i < recipes.size(); i++) {
+		//cout << "for recipes\n";
+		recipes[i].ListRecipe();
 	}
-	cout << "Po wywolaniu\n";
+	cout << "Przepisy wypisane\n";
 }
