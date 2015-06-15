@@ -1,12 +1,15 @@
+#include <conio.h>
+
 #include "CookBook.h"
 
 #include "Recipe.h"
 
 int main() {
 	//Menu
-	Recipe rec;
+	CookBook c = CookBook("ksiazka");
+	c.AddRecipe();
+	c.ListIngredient();
 
-	rec.AddRecipe("Zbyœ","Opis", 10);
-
+	_getch();
 	return 0;
 }

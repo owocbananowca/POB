@@ -15,4 +15,5 @@ private:
 public:
 	Dairy() {}
 	Dairy(string n, double a, string an);
+	void ListIngredient();
 };

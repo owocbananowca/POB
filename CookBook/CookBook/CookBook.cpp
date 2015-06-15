@@ -1,4 +1,5 @@
 #include <iostream>
+#include <algorithm>
 
 #include "CookBook.h"
 
@@ -20,8 +21,18 @@ void CookBook::AddRecipe() {
 	cout << "Podaj nazwe przepisu\n";
 	cin >> a; cin.ignore();
 	cout << "Podaj opis przygotowania\n";
-	cin >> b; cin.ignore();
+	getline(cin, b); cin.ignore();
+	//cin >> b; cin.ignore();
 	cout << "Podaj czas przygotowania\n";
 	cin >> m; cin.ignore();
 	rec.AddRecipe(a, b, m);
+}
+
+void CookBook::ListIngredient() {
+	cout << name << "\n"; //
+	for (Recipe r : recipes) {
+		cout << "for recipes\n";
+		r.ListIngredient();
+	}
+	cout << "Po wywolaniu\n";
 }

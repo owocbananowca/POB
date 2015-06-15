@@ -1,3 +1,5 @@
+#include <iostream>
+
 #include "Dairy.h"
 
 Dairy::Dairy(string n, double a, string an) {
@@ -5,4 +7,10 @@ Dairy::Dairy(string n, double a, string an) {
 	this->animal = an;
 	this->name = n;
 	this->type = "Dairy";
+}
+
+void Dairy::ListIngredient() {
+	cout << name << endl
+		<< amount << endl
+		<< animal << endl;
 }

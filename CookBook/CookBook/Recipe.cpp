@@ -21,10 +21,10 @@ void Recipe::AddRecipe(string n, string d, int m) {
 	while (temp != '7') {
 		cout << "Podaj kategorie skladniku?\n"
 			<< "1. Pieczywo\n"
-			<< "2. Przetwory mleczne\n"
+			<< "2. Nabial\n"
 			<< "3. Owoc\n"
 			<< "4. Warzywo\n"
-			<< "5. Miêso\n"
+			<< "5. Mieso\n"
 			<< "6. Przyprawa\n"
 			<< "7. Koniec\n";
 		cin >> temp;
@@ -59,7 +59,7 @@ void Recipe::AddRecipe(string n, string d, int m) {
 			cin >> a; cin.ignore();
 			cout << "Podaj ilosc skladnika(g)\n";
 			cin >> c; cin.ignore();
-			cout << "Od jakiego zwierzecia pobrano mleko?\n";
+			cout << "Od jakiego zwierzecia pobrano produkt?\n";
 			cin >> b; cin.ignore();
 			ingredients.push_back(new Dairy(a,c,b));
 			break;
@@ -135,6 +135,13 @@ void Recipe::AddRecipe(string n, string d, int m) {
 			system("cls");
 			break;
 		}
+	}
+}
+
+void Recipe::ListIngredient() {
+	cout << name << "\n";
+	for (Ingredient* i : ingredients) {
+		i->ListIngredient();
 	}
 }
 

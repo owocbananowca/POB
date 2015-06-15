@@ -17,7 +17,8 @@ public:
 	Recipe() {}
 	Recipe(string name, string description, int minutes);
 	void AddRecipe(string n, string d, int m);
-	void ListRecipe();
+	//ListRecipe
+	void ListIngredient();
 
 	void FindIngredient(string name);
 	void FindRecipe(string name);

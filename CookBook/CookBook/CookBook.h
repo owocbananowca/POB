@@ -17,7 +17,8 @@ public:
 	CookBook(string name);
 
 	void CreateBook(string name);
-	void ListBook();
+	//ListBook
+	void ListIngredient();
 	void SaveBook();
 	void LoadBook();
 
