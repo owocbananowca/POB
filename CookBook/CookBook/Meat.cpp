@@ -14,3 +14,7 @@ void Meat::ListIngredient() {
 		<< amount << endl
 		<< animal << endl;
 }
+
+string Meat::GetMyName() {
+	return name;
+}

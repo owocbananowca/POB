@@ -12,3 +12,7 @@ void Fruit::ListIngredient() {
 	cout << name << endl
 		<< amount << endl;
 }
+
+string Fruit::GetMyName() {
+	return name;
+}

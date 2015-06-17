@@ -21,3 +21,7 @@ void Bread::ListIngredient() {
 		cout << "Bezglutenowy\n";
 	}
 }
+
+string Bread::GetMyName() {
+	return name;
+}

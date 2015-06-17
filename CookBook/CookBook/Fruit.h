@@ -15,4 +15,5 @@ public:
 	Fruit() {}
 	Fruit(string n, double a);
 	void ListIngredient();
+	string GetMyName();
 };

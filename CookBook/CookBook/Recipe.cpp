@@ -151,3 +151,11 @@ void Recipe::ListRecipe() {
 	}
 	cout << "Koniec skladnikow\n";
 }
+
+size_t Recipe::GetIngredientsSize() {
+	return ingredients.size();
+}
+
+string Recipe::GetIngredientName(size_t i) {
+	ingredients[i]->GetMyName();
+}

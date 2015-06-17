@@ -4,6 +4,7 @@
 #include <vector>
 
 #include "Recipe.h"
+#include "AllIngredients.h"
 
 using namespace std;
 
@@ -18,12 +19,13 @@ public:
 
 	void CreateBook(string name);
 	//ListBook
-	void ListAll();
+	void ListAll(); //k
 	void SaveBook();
 	void LoadBook();
 
-	void AddRecipe(); //recipe -> ingredient-> ...
+	void AddRecipe(); //k
 
-	void FindIngredient(string name); //Recipe.FindIngredient(); wywo³aæ
-	void FindRecipe(string name); //Recipe.FindRecipe(); wywo³aæ
+	void FindIngredient(string name); //k
+	void FindRecipe(string name); //k
+	void DeleteRecipe(string name);
 };

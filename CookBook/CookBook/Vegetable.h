@@ -16,4 +16,5 @@ public:
 	Vegetable() {}
 	Vegetable(string name, double amount, bool vegetable);
 	void ListIngredient();
+	string GetMyName();
 };

@@ -19,3 +19,7 @@ void Vegetable::ListIngredient() {
 		cout << "Jarzyna\n";
 	}
 }
+
+string Vegetable::GetMyName() {
+	return name;
+}

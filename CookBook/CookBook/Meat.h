@@ -16,4 +16,5 @@ public:
 	Meat() {}
 	Meat(string n, double a, string an);
 	void ListIngredient();
+	string GetMyName();
 };

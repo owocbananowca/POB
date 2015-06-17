@@ -14,3 +14,7 @@ void Seasoning::ListIngredient() {
 		<< amount << endl
 		<< type << endl;
 }
+
+string Seasoning::GetMyName() {
+	return name;
+}

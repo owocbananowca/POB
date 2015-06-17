@@ -19,8 +19,7 @@ public:
 	void AddRecipe(string n, string d, int m);
 	//ListRecipe
 	void ListRecipe();
-
-	void FindIngredient(string name);
-	void FindRecipe(string name);
 	string GetName();
+	size_t GetIngredientsSize();
+	string GetIngredientName(size_t i);
 };

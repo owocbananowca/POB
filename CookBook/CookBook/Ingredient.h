@@ -9,4 +9,5 @@ class Ingredient/*: public Seasoning, public Dairy, public Vegetable, public Fru
 public:
 	Ingredient() {}
 	virtual void ListIngredient() = 0;
+	virtual string GetMyName() = 0;
 };

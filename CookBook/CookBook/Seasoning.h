@@ -16,4 +16,5 @@ public:
 	Seasoning() {}
 	Seasoning(string n, double a, string i);
 	void ListIngredient();
+	string GetMyName();
 };

@@ -14,3 +14,7 @@ void Dairy::ListIngredient() {
 		<< amount << endl
 		<< animal << endl;
 }
+
+string Dairy::GetMyName() {
+	return name;
+}
