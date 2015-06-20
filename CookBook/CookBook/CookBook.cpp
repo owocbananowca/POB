@@ -132,10 +132,12 @@ void CookBook::LoadBook() {
 	ifstream file;
 	file.open("CookBook.txt", ifstream::in);
 	if (file.is_open() == true) {
-		string* temp = new string[];
+		vector<string> temp;// = new string[];
+		string temp2;
 		int i = 0;
 		while (file.eof() != true) {
-			getline(file, temp[i]); //Caly txt do tablicy string
+			getline(file, temp2);//Caly txt do tablicy string
+			temp.push_back(temp2);
 			i++;
 		}
 		file.close();  //Wczytany plik to zamykamy
@@ -155,7 +157,7 @@ void CookBook::LoadBook() {
 		bool recStart = true;
 		//Tablica z danymi...
 		//Brzydkie, niebezpieczne, brak lepszego pomyslu
-		for (auto j = 0; j <= i; j++) {
+		for (auto j = 0; j <= temp.size(); j++) {
 			if (temp[j] == ";") { //trafiamy na ";" - koniec przepisu
 				recipes.push_back(rec); //push przepis do vectora
 				tempB = true;
@@ -236,7 +238,7 @@ void CookBook::LoadBook() {
 			tempB = false;
 		}
 		delete in;
-		delete[] temp;
+		//delete[] temp;
 	}
 	else {
 		cout << "Error, brak dostepu\n";
