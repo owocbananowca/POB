@@ -13,7 +13,7 @@ inna
 Kanapka
 Chleb posmarowac maslem. Polozyc na chleb szynke i pomidor.
 5
-bread
+Bread
 Chleb
 200
 Pszenica
