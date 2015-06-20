@@ -8,7 +8,7 @@ Bread::Bread(string n, double a, string m, bool g) {
 	this->gluten = g;
 	this->madeOf = m;
 	this->name = n;
-	this->type = "bread";
+	this->type = "Bread";
 }
 
 void Bread::ListIngredient() {
@@ -28,8 +28,8 @@ string Bread::GetMyName() {
 }
 
 void Bread::SaveToTxt() {
-	fstream file;
-	file.open("CookBook.txt", fstream::in);
+	ofstream file;
+	file.open("CookBook.txt", ofstream::app | ofstream::in);
 	file << type << endl
 		<< name << endl
 		<< amount << endl

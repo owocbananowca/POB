@@ -1,0 +1,33 @@
+Jajecznica
+Jajko i sol wymieszac. Smazyc do sciecia bialka.
+10
+Dairy
+Jajko
+200
+Kura
+Seasoning
+Sol
+10
+inna
+;
+Kanapka
+Chleb posmarowac maslem. Polozyc na chleb szynke i pomidor.
+5
+bread
+Chleb
+200
+Pszenica
+1
+Dairy
+Maslo
+10
+Krowa
+Vegetable
+Pomidor
+50
+0
+Meat
+Szynka
+50
+drob
+;

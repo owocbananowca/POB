@@ -13,7 +13,7 @@ Seasoning::Seasoning(string n, double a, string i) {
 void Seasoning::ListIngredient() {
 	cout << name << endl
 		<< amount << endl
-		<< type << endl;
+		<< infoType << endl;
 }
 
 string Seasoning::GetMyName() {
@@ -21,8 +21,8 @@ string Seasoning::GetMyName() {
 }
 
 void Seasoning::SaveToTxt() {
-	fstream file;
-	file.open("CookBook.txt", fstream::in);
+	ofstream file;
+	file.open("CookBook.txt", ofstream::in | ofstream::app);
 	file << type << endl
 		<< name << endl
 		<< amount << endl

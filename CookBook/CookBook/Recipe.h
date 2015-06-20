@@ -25,4 +25,6 @@ public:
 
 	void SaveRecipe();
 	void LoadRecipe(fstream file);
+
+	void pushIngredient(Ingredient* i);
 };

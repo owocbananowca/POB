@@ -21,8 +21,8 @@ string Dairy::GetMyName() {
 }
 
 void Dairy::SaveToTxt() {
-	fstream file;
-	file.open("CookBook.txt", fstream::in);
+	ofstream file;
+	file.open("CookBook.txt", ofstream::in | ofstream::app);
 	file << type << endl
 		<< name << endl
 		<< amount << endl
