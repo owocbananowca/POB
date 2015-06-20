@@ -18,4 +18,5 @@ public:
 	Bread(string n, double a, string m, bool g);
 	void ListIngredient();
 	string GetMyName();
+	void SaveToTxt();
 };

@@ -17,4 +17,5 @@ public:
 	Dairy(string n, double a, string an);
 	void ListIngredient();
 	string GetMyName();
+	void SaveToTxt();
 };

@@ -1,4 +1,5 @@
 #include <iostream>
+#include <fstream>
 
 #include  "Seasoning.h"
 
@@ -17,4 +18,14 @@ void Seasoning::ListIngredient() {
 
 string Seasoning::GetMyName() {
 	return name;
+}
+
+void Seasoning::SaveToTxt() {
+	fstream file;
+	file.open("CookBook.txt", fstream::in);
+	file << type << endl
+		<< name << endl
+		<< amount << endl
+		<< infoType << endl;
+	file.close();
 }

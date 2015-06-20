@@ -1,4 +1,5 @@
 #include <iostream>
+#include <fstream>
 
 #include "Recipe.h"
 #include "AllIngredients.h"
@@ -157,5 +158,16 @@ size_t Recipe::GetIngredientsSize() {
 }
 
 string Recipe::GetIngredientName(size_t i) {
-	ingredients[i]->GetMyName();
+	return ingredients[i]->GetMyName();
+}
+
+void Recipe::SaveRecipe() {
+	fstream file;
+	file.open("CookBook.txt", fstream::in);
+	file << name << endl
+		<< descripction << endl
+		<< minutes << endl;
+	for (size_t i = 0; i < ingredients.size(); i++) {
+		ingredients[i]->SaveToTxt();
+	}
 }

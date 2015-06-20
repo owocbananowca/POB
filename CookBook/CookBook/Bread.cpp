@@ -1,4 +1,5 @@
 #include <iostream>
+#include <fstream>
 
 #include "Bread.h"
 
@@ -24,4 +25,15 @@ void Bread::ListIngredient() {
 
 string Bread::GetMyName() {
 	return name;
+}
+
+void Bread::SaveToTxt() {
+	fstream file;
+	file.open("CookBook.txt", fstream::in);
+	file << type << endl
+		<< name << endl
+		<< amount << endl
+		<< madeOf << endl
+		<< gluten << endl;
+	file.close();
 }

@@ -16,10 +16,13 @@ private:
 public:
 	Recipe() {}
 	Recipe(string name, string description, int minutes);
-	void AddRecipe(string n, string d, int m);
+	void AddRecipe(string n, string d, int m); //k
 	//ListRecipe
-	void ListRecipe();
-	string GetName();
-	size_t GetIngredientsSize();
-	string GetIngredientName(size_t i);
+	void ListRecipe(); //k
+	string GetName(); //k
+	size_t GetIngredientsSize(); //k
+	string GetIngredientName(size_t i); //k
+
+	void SaveRecipe();
+	void LoadRecipe(fstream file);
 };

@@ -1,5 +1,6 @@
 #include <iostream>
 #include <algorithm>
+#include <fstream>
 
 #include "CookBook.h"
 
@@ -41,7 +42,7 @@ void CookBook::ListAll() {
 
 void CookBook::FindRecipe(string rName) {
 	for (size_t i = 0; i < recipes.size(); i++) {
-		if (recipes[i].GetName == rName) {
+		if (recipes[i].GetName() == rName) {
 			cout << "Znaleziono przepis:\n";
 			recipes[i].ListRecipe();
 			break; //Zakladam ze nazwy siê nie powtarzaja
@@ -72,7 +73,7 @@ void CookBook::FindIngredient(string iName) {
 void CookBook::DeleteRecipe(string rName) {
 	bool temp2 = false;
 	for (size_t i = 0; i < recipes.size(); i++) {
-		if (recipes[i].GetName == rName) {
+		if (recipes[i].GetName() == rName) {
 			cout << "Znaleziono przepis:\n";
 			temp2 = true;
 			recipes[i].ListRecipe();
@@ -92,5 +93,19 @@ void CookBook::DeleteRecipe(string rName) {
 	}
 	if (temp2 == false) {
 		cout << "Nie znaleziono takiego przepisu\n";
+	}
+}
+
+void CookBook::SaveBook() {
+	fstream file;
+	file.open("CookBook.txt", fstream::in | fstream::trunc); //in - zapis,  truc - wyczyszczenie, out - odczyt
+	if (file.good() == true) {
+		file << name << endl;
+		for (size_t i = 0; i < recipes.size(); i++) {
+			recipes[i].SaveRecipe();
+		}
+	}
+	else {
+		cout << "Error, brak dostêpu do pliku\n";
 	}
 }

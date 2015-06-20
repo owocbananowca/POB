@@ -1,4 +1,5 @@
 #include <iostream>
+#include <fstream>
 
 #include "Dairy.h"
 
@@ -17,4 +18,14 @@ void Dairy::ListIngredient() {
 
 string Dairy::GetMyName() {
 	return name;
+}
+
+void Dairy::SaveToTxt() {
+	fstream file;
+	file.open("CookBook.txt", fstream::in);
+	file << type << endl
+		<< name << endl
+		<< amount << endl
+		<< animal << endl;
+	file.close();
 }

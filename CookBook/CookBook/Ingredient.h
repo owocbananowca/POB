@@ -10,4 +10,5 @@ public:
 	Ingredient() {}
 	virtual void ListIngredient() = 0;
 	virtual string GetMyName() = 0;
+	virtual void SaveToTxt() = 0;
 };

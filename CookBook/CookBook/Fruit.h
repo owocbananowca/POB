@@ -16,4 +16,5 @@ public:
 	Fruit(string n, double a);
 	void ListIngredient();
 	string GetMyName();
+	void SaveToTxt();
 };
