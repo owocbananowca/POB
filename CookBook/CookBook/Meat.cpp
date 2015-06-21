@@ -26,6 +26,10 @@ void Meat::SaveToTxt() {
 	file << type << endl
 		<< name << endl
 		<< amount << endl
-		<< animal << endl;
+		<< "-" << endl
+		<< "-" << endl
+		<< animal << endl
+		<< "-" << endl
+		<< "-" << endl;
 	file.close();
 }

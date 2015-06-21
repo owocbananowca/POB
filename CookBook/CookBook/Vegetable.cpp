@@ -31,6 +31,10 @@ void Vegetable::SaveToTxt() {
 	file << type << endl
 		<< name << endl
 		<< amount << endl
+		<< "-" << endl
+		<< "-" << endl
+		<< "-" << endl
+		<< "-" << endl
 		<< vegetable << endl;
 	file.close();
 }

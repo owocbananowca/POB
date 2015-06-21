@@ -23,6 +23,11 @@ void Fruit::SaveToTxt() {
 	file.open("CookBook.txt", ofstream::in | ofstream::app);
 	file << type << endl
 		<< name << endl
-		<< amount << endl;
+		<< amount << endl
+		<< "-" << endl
+		<< "-" << endl
+		<< "-" << endl
+		<< "-" << endl
+		<< "-" << endl;
 	file.close();
 }

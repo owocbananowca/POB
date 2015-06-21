@@ -26,6 +26,10 @@ void Seasoning::SaveToTxt() {
 	file << type << endl
 		<< name << endl
 		<< amount << endl
-		<< infoType << endl;
+		<< "-" << endl
+		<< "-" << endl
+		<< "-" << endl
+		<< infoType << endl
+		<< "-" << endl;
 	file.close();
 }

@@ -127,6 +127,7 @@ void CookBook::SaveBook() {
 	}
 }
 
+/*
 void CookBook::LoadBook() {
 	// Jakby wszystkie sk³adniki mia³y tyle samo argumentów(takich samych)  by³oby ³atwo ale raczej nie o to chodzi :v
 	ifstream file;
@@ -242,5 +243,119 @@ void CookBook::LoadBook() {
 	}
 	else {
 		cout << "Error, brak dostepu\n";
+	}
+}
+*/
+
+void CookBook::LoadBook() {
+	ifstream file;
+	file.open("CookBook.txt", ifstream::in);
+	if (file.is_open() == true) {
+		vector<string> temp;			//Vector na zawartosc pliku
+		string temp2;
+		while (file.eof() != true) {
+			getline(file, temp2);		//Caly txt do tablicy string
+			temp.push_back(temp2);
+		}
+		file.close();
+		cout << "Wczytano do vectora\n";
+		//Prawdopodobnie tworzone obiekty
+		Recipe rec;			Bread br;
+		Dairy dr;			Fruit fr;
+		Meat me;			Seasoning se;
+		Vegetable ve;		Ingredient* in = nullptr;
+		//Potrzebne zmienne do tworzenia obiektow
+		string s1, s2, s3;	double d1;
+		bool b1;
+		bool readRecipe = true;
+		int tempI = 0;
+		for (size_t i = 0; i < temp.size(); /*sam musze o to dbac*/ ) {
+			cout << "Przebiegi petli: " << i << endl;
+			if (readRecipe == true) {
+				cout << "Dane przepisu\n";
+				s1 = temp[i];
+				s2 = temp[i + 1];
+				d1 = stoi(temp[i + 2]);
+				readRecipe = false;
+				i += 3;
+				rec = Recipe(s1, s2, d1);	//dane przepisu
+			}
+			else if (temp[i] == ";") {		//œrednik koñczy ka¿dy przepis
+				cout << "Koniec przepisu, natrafiono na ;\n";
+				readRecipe = true;
+				recipes.push_back(rec);		//wpychamy przepis do vectora
+				if (temp[i + 1] == "") {	//Pusta linia = ostatnia linia w pliku txt
+					break;
+				}
+				else {
+					i++;
+				}
+			}
+			else { //else tylko dla czytelnoœci 0o
+				cout << "Rozpoznanie skladnika\n";
+				if (temp[i] == "Bread") {
+					s1 = temp[i + 1];
+					d1 = stoi(temp[i + 2]);
+					s2 = temp[i + 3];
+					if (temp[i + 4] == "0") {
+						b1 = false;
+					}
+					else {
+						b1 = true;
+					}
+					in = new Bread(s1,d1,s2,b1);
+					rec.pushIngredient(in);
+					i += 8; //8 parametrow, wchodzimy na kolejny
+							//którym bêdzie ; albo cos z tych if
+				}
+				else if (temp[i] == "Dairy") {
+					s1 = temp[i + 1];
+					d1 = stoi(temp[i + 2]);
+					s2 = temp[i + 5];
+					in = new Dairy(s1, d1, s2);
+					rec.pushIngredient(in);
+					i += 8;
+				}
+				else if (temp[i] == "Fruit") {
+					s1 = temp[i + 1];
+					d1 = stoi(temp[i + 2]);
+					in = new Fruit(s1, d1);
+					rec.pushIngredient(in);
+					i += 8;
+				}
+				else if (temp[i] == "Meat") {
+					s1 = temp[i + 1];
+					d1 = stoi(temp[i + 2]);
+					s2 = temp[i + 5];
+					in = new Meat(s1, d1, s2);
+					rec.pushIngredient(in);
+					i += 8;
+				}
+				else if (temp[i] == "Seasoning") {
+					s1 = temp[i + 1];
+					d1 = stoi(temp[i + 2]);
+					s2 = temp[i + 6];
+					in = new Seasoning(s1, d1, s2);
+					rec.pushIngredient(in);
+					i += 8;
+				}
+				else if (temp[i] == "Vegetable") {
+					s1 = temp[i + 1];
+					d1 = stoi(temp[i + 2]);
+					if (temp[i + 4] == "0") {
+						b1 = false;
+					}
+					else {
+						b1 = true;
+					}
+					in = new Vegetable(s1, d1, b1);
+					rec.pushIngredient(in);
+					i += 8;
+				}
+			}
+		}
+	}
+	else {
+		cout << "Error, brak dostepu do pliku\n";
 	}
 }

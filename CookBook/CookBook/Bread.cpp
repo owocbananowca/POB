@@ -34,6 +34,9 @@ void Bread::SaveToTxt() {
 		<< name << endl
 		<< amount << endl
 		<< madeOf << endl
-		<< gluten << endl;
+		<< gluten << endl
+		<< "-" << endl
+		<< "-" << endl
+		<< "-" << endl;
 	file.close();
 }

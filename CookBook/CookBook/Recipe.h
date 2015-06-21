@@ -24,7 +24,7 @@ public:
 	string GetIngredientName(size_t i); //k
 
 	void SaveRecipe();
-	void LoadRecipe(fstream file);
+	//void LoadRecipe(fstream file);
 
 	void pushIngredient(Ingredient* i);
 };
