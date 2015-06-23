@@ -94,7 +94,6 @@
     <ClCompile Include="CookBook.cpp" />
     <ClCompile Include="Dairy.cpp" />
     <ClCompile Include="Fruit.cpp" />
-    <ClCompile Include="Ingredient.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Meat.cpp" />
     <ClCompile Include="Recipe.cpp" />

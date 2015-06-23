@@ -83,7 +83,7 @@ void Recipe::AddRecipe(string n, string d, int m) {
 			cin >> c; 
 			cout << "Czy wa¿ywo wymaga obrobki cieplnej(jest jarzyna)\n1. Tak\n2. Nie\n";
 			cin >> temp; 
-			switch (temp) {
+			switch (temp) { //czemu nie zrobilem if'a? :v
 			case '1':
 				d = true;
 				break;

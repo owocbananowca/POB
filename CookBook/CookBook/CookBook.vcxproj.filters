@@ -65,9 +65,6 @@
     <ClCompile Include="Fruit.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Ingredient.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Meat.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
